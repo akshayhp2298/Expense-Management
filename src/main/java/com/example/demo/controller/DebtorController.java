@@ -8,21 +8,20 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.model.Expense;
-import com.example.demo.repo.ExpenseRepo;
+import com.example.demo.model.Debtor;
+import com.example.demo.repo.DebtorRepo;
 
-
-@RestController(value = "expense")
-public class ExpenseController {
+@RestController(value = "debtor")
+public class DebtorController {
 	@Autowired
-	ExpenseRepo repo;
+	DebtorRepo repo;
 	
-	@GetMapping("expense/by/user/{user}")
-	List<Expense> getExpenseByUser(@PathVariable String user) {
+	@GetMapping("debtor/by/user/{user}")
+	List<Debtor> getExpenseByUser(@PathVariable String user) {
 		return repo.findByUId(Integer.parseInt(user));
 	}
 	
-	@DeleteMapping("expense/{id}")
+	@DeleteMapping("debtor/{id}")
 	String deleteExpense(@PathVariable int id) {
 		repo.deleteById(id);
 		return "success";
