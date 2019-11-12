@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.model.Expense;
 import com.example.demo.repo.ExpenseRepo;
 
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+
 @RestController(value = "expense")
 public class ExpenseController {
 	@Autowired

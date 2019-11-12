@@ -19,7 +19,7 @@ import com.example.demo.repo.UserRepo;
 import antlr.collections.List;
 import net.minidev.json.JSONObject;
 
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+
 @RestController(value = "user")
 public class UserController {
 	@Autowired
